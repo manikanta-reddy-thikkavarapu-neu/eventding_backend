@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const userdb = require("../model/signupUserModel");
 const validator = require("../utilities/Validators");
 const { json } = require("body-parser");

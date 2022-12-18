@@ -1,7 +1,7 @@
 const userdb = require('../model/loginUserModel');
 const validator = require('../utilities/Validators');
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 let loginServices = {};
 
