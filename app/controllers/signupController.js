@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const signupServices = require("../services/signupServices");
 const SignUpUser = require("../model/signUpUser");
-const validator = require("../utilities/Validators");
+const validator = require("../utilities/validator");
 
 const signup = async (req, res) => {
   try {

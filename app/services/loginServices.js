@@ -1,5 +1,5 @@
 const userdb = require('../model/loginUserModel');
-const validator = require('../utilities/Validators');
+const validator = require('../utilities/validator');
 
 const bcrypt = require('bcryptjs');
 

@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const userdb = require("../model/signupUserModel");
-const validator = require("../utilities/Validators");
+const validator = require("../utilities/validator");
 const { json } = require("body-parser");
 
 const login = async (req, res) => {

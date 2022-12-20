@@ -1,7 +1,7 @@
-let Validator = {};
+let validator = {};
 
 //to validate user full name
-Validator.validateFirstName = function (name) {
+validator.validateFirstName = function (name) {
     if(name == ""){
         let err = new Error('Please enter the First name.');
         err.status = 400;
@@ -15,7 +15,7 @@ Validator.validateFirstName = function (name) {
     }
 }
 
-Validator.validateLastName = function (name) {
+validator.validateLastName = function (name) {
     if(name == ""){
         let err = new Error('Please enter the Last name.');
         err.status = 400;
@@ -30,7 +30,7 @@ Validator.validateLastName = function (name) {
 }
 
 //to validate email
-Validator.validateEmail = function (email) {
+validator.validateEmail = function (email) {
     if(email == ""){
         let err = new Error('Please enter the email.');
         err.status = 400;
@@ -45,7 +45,7 @@ Validator.validateEmail = function (email) {
 }
 
 //to validate password
-Validator.validatePassword = function (password) {
+validator.validatePassword = function (password) {
     if(password == ""){
         let err = new Error('Please enter the password.');
         err.status = 400;
@@ -59,4 +59,4 @@ Validator.validatePassword = function (password) {
     }
 }
 
-module.exports = Validator;
+module.exports = validator;
