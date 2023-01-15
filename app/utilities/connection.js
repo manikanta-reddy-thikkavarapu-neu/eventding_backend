@@ -65,7 +65,7 @@ let userSelectedEventSchema = {
 
 //const userSchema = new Schema(schema, { collection: "User", timestamps: true });
 const signUpSchema = new Schema(signupSchema, {
-  collection: "SignUpEvent",
+  collection: "SignUpEvent", // Will overwrite the model collection name
   timestamps: true,
 });
 
@@ -88,7 +88,7 @@ connection.getUserCollectionSignUp = async () => {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })
-    ).model("SignUpEvent", signUpSchema);
+    ).model("SignUpEvent", signUpSchema); // If in schema creation collection name is given this name is not considered, here if u give SignUpEvent123 will also work. If in schema collection is not defined then whatever name u give here it'll create a collection with plurals and lowercase name.
   } catch (err) {
     let error = new Error("Could not connect to database");
     error.status = 500;
